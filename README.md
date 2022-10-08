@@ -1,2 +1,2 @@
-# neutlan_webpage
-URL: https://neutlan.github.io/neutlan_webpage/
+# NEUTLAN
+URL: https://neutlan.github.io/info.neutlan/
