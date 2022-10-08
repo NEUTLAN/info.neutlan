@@ -1,0 +1,336 @@
+html {
+  height: 100%;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  position: relative;
+  overflow-x: hidden;
+  height: max-content;
+
+}
+body::after {
+  content: "";
+  background: url("https://www.american.edu/cas/images/ManyPeople_SocialMedia.jpg");
+    background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.16;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+
+  .container {
+    max-width: 100% !important;
+  }
+
+  body {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(61, 64, 67);
+    font-size: 24px;
+  }
+
+  .main-container {
+    display: flex;
+  }
+
+  .main-container > * {
+    padding: 20px 25px;
+  }
+
+  .table-of-contents {
+    text-align: center;
+    padding: 2%;
+    border-radius: 20px;
+    color: rgba(255, 255, 255);
+    background-color: #343a40 !important;
+    position: fixed;
+    opacity: 0.7;
+  }
+
+  .table-of-contents p {
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+
+  .table-of-contents ul {
+    position: fixed;
+    /* Chrome (asshole) */
+    position: sticky;
+    /* Firefox */
+    margin-top: 2em;
+    top: 4em;
+  }
+
+  h1:first-child {
+    margin-top: 0;
+  }
+
+  .post-content {
+    margin: 5%;
+    max-width: 80%;
+    margin-bottom: 100px;
+  }
+
+  /* TOC part */
+
+  .table-of-contents svg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: auto;
+    display: none;
+    stroke: #4386fc;
+    transform: translateY(-50%);
+  }
+
+  .toc-reading svg {
+    display: block;
+  }
+
+  .table-of-contents ul {
+    width: 90%;
+    counter-reset: articles;
+    padding: 0;
+  }
+
+  .table-of-contents li {
+    display: block;
+    counter-increment: articles;
+  }
+
+  .table-of-contents li + li {
+    margin-top: 2em;
+  }
+
+  .table-of-contents a {
+    display: block;
+    padding: 0 1.1em 0 3.2em;
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  a.toc-reading,
+  a.toc-already-read.toc-reading {
+    color: #4386fc;
+    opacity: 1;
+  }
+
+  a.toc-already-read {
+    opacity: 0.4;
+  }
+
+  .table-of-contents a:before {
+    content: counter(articles, decimal);
+    position: absolute;
+    bottom: auto;
+    left: 0;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 34px;
+    text-align: center;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #d9d9d9 inset;
+    color: rgba(255, 255, 255);
+  }
+
+  /* Three columns side by side */
+  .column {
+    float: left;
+    width: 20%;
+    margin: 2%;
+    padding: 0 8px;
+  }
+
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 800px) {
+    .column {
+      width: 40%;
+      display: block;
+    }
+
+    .col-4 {
+      max-width: 0 !important;
+      visibility: hidden;
+    }
+    .row-a {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+    }
+    .col-8 {
+      max-width: 100% !important;
+    }
+    .post-content {
+      max-width: 100% !important;
+    }
+  }
+
+  /* Add some shadows to create a card effect */
+  .card {
+    border: none;
+    text-align: center;
+    background: none;
+  }
+  img {
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+    margin: 4.5%;
+    margin-top: 1%;
+    width: 90% !important ;
+  }
+  /* Some left and right padding inside the container */
+
+  .title {
+    color: grey;
+  }
+  h1 {
+    font-size: 35px;
+    font-weight: 800;
+    color: #343a40 !important;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  p,
+  li {
+    font-size: 24px;
+  }
+
+.card{
+ background-color: #fdf8e9;
+ height: 60vh;
+ box-shadow: 0 15px 10px #777
+}
+.card p {
+  font-size: 0.8rem;
+}
+
+.card img {
+  width: 30vw;
+  height: 40vh;
+  border-radius: 0%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 3vh;
+}
+
+.post-content{
+    background-color: #fdf8e9;
+    box-shadow: 0 15px 10px #777;
+    margin-right: 3vw;
+     padding: 5%;
+}
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+.people{
+  height: 95vh;
+}
